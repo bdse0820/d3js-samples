@@ -29,12 +29,10 @@
       .data(data)
       .enter()
       .append('div')
-        .style({
-            'width': function (d){ return d * 20 + 'px'; },
-            'height': '20px',
-            'background-color': 'red',
-            'margin-bottom': '5px'
-          });
+        .style('width', function (d){ return d * 20 + 'px'; })
+        .style('height', '20px')
+        .style('background-color', 'red')
+        .style('margin-bottom', '5px');
 
   </script>
 

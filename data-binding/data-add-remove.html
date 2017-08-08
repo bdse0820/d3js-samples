@@ -51,9 +51,7 @@
   // body 與 容器
   var body = d3.select('body');
   var wrap = body.append('div')
-    .style({
-      'height': height + 'px'
-    })
+    .style( 'height', height + 'px' )
     .classed('wrap', true);
 
   // render, & update
@@ -67,14 +65,9 @@
       .text(function(d) {
         return d;
       })
-      .style({
-        'height': function(d) {
-          return d * 25 + 'px';
-        },
-        'top': function(d) {
-          return (height - d * 25) + 'px';
-        }
-      });
+      .style('height', function(d) { return d * 25 + 'px'; } )
+      .style('top',    function(d) { return (height - d * 25) + 'px'; });
+
   };
 
   // remove
@@ -85,14 +78,8 @@
       .text(function(d) {
         return d;
       })
-      .style({
-        'height': function(d) {
-          return d * 25 + 'px';
-        },
-        'top': function(d) {
-          return (height - d * 25) + 'px';
-        }
-      })
+      .style('height', function(d) { return d * 25 + 'px'; } )
+      .style('top',    function(d) { return (height - d * 25) + 'px'; })
       .exit()
       .remove();
   };

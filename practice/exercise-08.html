@@ -56,20 +56,17 @@
 
       var inner = d3.select('.inner');
 
-      inner.style({
-        'width': '0%',
-        'background-color': 'red'
-      });
+      inner
+        .style('width', '0%')
+        .style('background-color', 'red');
 
       inner.transition()
         .duration(3000)
-        .style({
-          'width': '100%',
-          'background-color': 'green'
-        })
+        .style('width', '100%')
+        .style('background-color', 'green')
         .attrTween("d", function () {
           return function (n) {
-           inner.text( Math.floor(n * 100) );
+            inner.text( Math.floor(n * 100) );
           };
         });
     });

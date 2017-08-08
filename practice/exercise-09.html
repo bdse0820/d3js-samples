@@ -33,13 +33,11 @@
       .selectAll('div')
       .data(data)
       .enter()
-      .append('div')
-        .style({
-            'width': function (d){ return d * 20 + 'px'; },
-            'height': '20px',
-            'background-color': 'red',
-            'margin-bottom': '5px'
-          });
+      .append('div')        
+        .style('width', function (d){ return d * 20 + 'px'; })
+        .style('height', '20px')
+        .style('background-color', 'red')
+        .style('margin-bottom', '5px');
 
     d3.select('body')
       .insert('button', ':first-child')
