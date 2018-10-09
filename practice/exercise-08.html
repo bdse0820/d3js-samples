@@ -58,20 +58,23 @@
 
       inner.style({
         'width': '0%',
-        'background-color': 'red'
+        'background-color': '#80d6d6'
       });
 
       inner.transition()
         .duration(3000)
+		.ease("bounce")
         .style({
           'width': '100%',
-          'background-color': 'green'
+          'background-color': '#8080d6'
         })
         .attrTween("d", function () {
           return function (n) {
            inner.text( Math.floor(n * 100) );
           };
-        });
+		
+        })
+		.each('end',function(){alert('End')})  
     });
 
   </script>
